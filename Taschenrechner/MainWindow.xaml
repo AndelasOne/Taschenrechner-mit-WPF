@@ -1,0 +1,48 @@
+﻿<Window x:Class="Taschenrechner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Taschenrechner"
+        mc:Ignorable="d"
+        Title="Texas Instruments TR" Height="565" Width="310" HorizontalAlignment="Left" VerticalAlignment="Top" ResizeMode="NoResize">
+    <Grid Margin="0,0,-6.667,-2.333">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="143*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="0,390,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518"/>
+        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="68,319,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518"/>
+        <Grid Grid.ColumnSpan="3" Background="#FF515151" Margin="0,0,0,0.666">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition Width="143*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="vier" Content="4" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="0,319,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="vier_Click"/>
+            <Button x:Name="drei" Content="3" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="136,390,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="drei_Click"/>
+            <Button x:Name="_null" Content="0" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="0,457,0,0" VerticalAlignment="Top" Width="128" FontSize="20" FontWeight="Bold" Click="_null_Click"/>
+            <Button x:Name="komma" Content="," Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="136,457,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="komma_Click"/>
+            <Button x:Name="equal" Content="=" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="205,457,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Background="#FFFF5934" Click="equal_Click"/>
+            <Button x:Name="sechs" Content="6" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="136,319,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="sechs_Click"/>
+            <Button x:Name="zwei" Content="2" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="68,390,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="zwei_Click"/>
+            <Button x:Name="plus" Content="+" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="205,390,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Background="#FFFFBD34" Click="plus_Click"/>
+            <Button x:Name="minus" Content="-" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="205,319,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Background="#FFFFBD34" Click="minus_Click"/>
+            <Button x:Name="sieben" Content="7" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="0,246,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="sieben_Click"/>
+            <Button x:Name="neun" Content="9" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="136,246,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontWeight="Bold" FontSize="20" Click="neun_Click"/>
+            <Button x:Name="mal" Content="x" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="205,246,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="15" FontWeight="Bold" Background="#FFFFBD34" Click="mal_Click"/>
+            <Button x:Name="clear" Content="C" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="0,173,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontWeight="Bold" FontSize="20" Click="clear_Click"/>
+            <Button x:Name="vorzeichen" Content="+/-" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="136,173,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="vorzeichen_Click"/>
+            <Button x:Name="geteilt" Content="/" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="205,173,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="15" FontWeight="Bold" Background="#FFFFBD34" Click="geteilt_Click"/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Height="136" Margin="0,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Foreground="#FF524B4B" Background="#FF1B1B1B"/>
+            <Button x:Name="fünf" Content="5" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="68,319,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="fünf_Click"/>
+            <Button x:Name="eins" Content="1" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="0,390,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="eins_Click"/>
+
+        </Grid>
+        <Button x:Name="acht" Content="8" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="68,246,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="acht_Click"/>
+        <Button x:Name="delete" Content="D" Grid.Column="2" HorizontalAlignment="Left" Height="60" Margin="68,173,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.775,2.518" FontSize="20" FontWeight="Bold" Click="delete_Click"/>
+        <TextBox x:Name="display_output" Grid.Column="2" HorizontalAlignment="Left" Height="50" Margin="10,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" FontSize="40" TextAlignment="Right" FontFamily="Yu Gothic UI Semilight"/>
+
+    </Grid>
+</Window>
